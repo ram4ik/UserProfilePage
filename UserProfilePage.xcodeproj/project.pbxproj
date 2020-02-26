@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,11 @@
 		950756232406569E00E6BE24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 950756222406569E00E6BE24 /* Assets.xcassets */; };
 		950756262406569E00E6BE24 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 950756252406569E00E6BE24 /* Preview Assets.xcassets */; };
 		950756292406569E00E6BE24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 950756272406569E00E6BE24 /* LaunchScreen.storyboard */; };
+		950756342406578100E6BE24 /* ProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950756332406578100E6BE24 /* ProfileHeader.swift */; };
+		95075637240660FA00E6BE24 /* ASCollectionView in Frameworks */ = {isa = PBXBuildFile; productRef = 95075636240660FA00E6BE24 /* ASCollectionView */; };
+		950756392406614100E6BE24 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950756382406614100E6BE24 /* Post.swift */; };
+		9507563B240661BC00E6BE24 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9507563A240661BC00E6BE24 /* PostCell.swift */; };
+		9507563D2406635000E6BE24 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9507563C2406635000E6BE24 /* PostViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,10 @@
 		950756252406569E00E6BE24 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		950756282406569E00E6BE24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9507562A2406569E00E6BE24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		950756332406578100E6BE24 /* ProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeader.swift; sourceTree = "<group>"; };
+		950756382406614100E6BE24 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		9507563A240661BC00E6BE24 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		9507563C2406635000E6BE24 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95075637240660FA00E6BE24 /* ASCollectionView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,9 +66,11 @@
 		9507561B2406569D00E6BE24 /* UserProfilePage */ = {
 			isa = PBXGroup;
 			children = (
+				950756322406570000E6BE24 /* ViewModel */,
+				95075631240656F200E6BE24 /* View */,
+				95075630240656E900E6BE24 /* Model */,
 				9507561C2406569D00E6BE24 /* AppDelegate.swift */,
 				9507561E2406569D00E6BE24 /* SceneDelegate.swift */,
-				950756202406569D00E6BE24 /* ContentView.swift */,
 				950756222406569E00E6BE24 /* Assets.xcassets */,
 				950756272406569E00E6BE24 /* LaunchScreen.storyboard */,
 				9507562A2406569E00E6BE24 /* Info.plist */,
@@ -73,6 +85,32 @@
 				950756252406569E00E6BE24 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		95075630240656E900E6BE24 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				950756382406614100E6BE24 /* Post.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		95075631240656F200E6BE24 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				950756202406569D00E6BE24 /* ContentView.swift */,
+				950756332406578100E6BE24 /* ProfileHeader.swift */,
+				9507563A240661BC00E6BE24 /* PostCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		950756322406570000E6BE24 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9507563C2406635000E6BE24 /* PostViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -91,6 +129,9 @@
 			dependencies = (
 			);
 			name = UserProfilePage;
+			packageProductDependencies = (
+				95075636240660FA00E6BE24 /* ASCollectionView */,
+			);
 			productName = UserProfilePage;
 			productReference = 950756192406569D00E6BE24 /* UserProfilePage.app */;
 			productType = "com.apple.product-type.application";
@@ -119,6 +160,9 @@
 				Base,
 			);
 			mainGroup = 950756102406569D00E6BE24;
+			packageReferences = (
+				95075635240660FA00E6BE24 /* XCRemoteSwiftPackageReference "ASCollectionView" */,
+			);
 			productRefGroup = 9507561A2406569D00E6BE24 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -146,9 +190,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				950756342406578100E6BE24 /* ProfileHeader.swift in Sources */,
+				9507563D2406635000E6BE24 /* PostViewModel.swift in Sources */,
 				9507561D2406569D00E6BE24 /* AppDelegate.swift in Sources */,
 				9507561F2406569D00E6BE24 /* SceneDelegate.swift in Sources */,
 				950756212406569D00E6BE24 /* ContentView.swift in Sources */,
+				950756392406614100E6BE24 /* Post.swift in Sources */,
+				9507563B240661BC00E6BE24 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +390,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		95075635240660FA00E6BE24 /* XCRemoteSwiftPackageReference "ASCollectionView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apptekstudios/ASCollectionView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		95075636240660FA00E6BE24 /* ASCollectionView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 95075635240660FA00E6BE24 /* XCRemoteSwiftPackageReference "ASCollectionView" */;
+			productName = ASCollectionView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 950756112406569D00E6BE24 /* Project object */;
 }
